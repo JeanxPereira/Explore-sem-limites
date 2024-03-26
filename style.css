@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --color-accent: #B52184;
+  --color-accent-purple: #312D64;
+  --color-white: #fff;
+  --bg-gradient: linear-gradient(120deg, rgba(52,49,147,1) 0%, rgba(48,44,99,1) 100%);
+  --bg-gradient-hover: linear-gradient(120deg, rgb(72, 69, 170) 0%, rgb(59, 55, 124) 100%);
+}
+
+body, html, input, textarea, button {
+  font-family: 'Mulish', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100vh;
+}
+
+/* Home Section */
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 3.2rem;
+}
+
+#home #astronaut {
+  object-fit: cover;
+  max-width: 600px;
+  width: 100%;
+}
+
+#home h1{
+  font-weight: 900;
+  font-size: 3.2rem;
+  color: var(--color-accent);
+  margin-top: 1.7rem;
+}
+
+.arrow-nav {
+  width: 6rem;
+  margin: 3.5rem auto;
+}
+
+#home p{
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--color-accent-purple);
+}
+
+/* Cards Section */
+#cards {
+  background: var(--bg-gradient);
+  padding: 4rem;
+  height: 142vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: 2rem;
+  padding: 2.5rem;
+  margin-bottom: 5rem;
+  width: 35rem;
+}
+
+.card h1{
+  color: var(--color-accent);
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 2rem 0;
+}
+
+.card p{
+  color: var(--color-accent-purple);
+  font-size: 1.6rem;
+  font-weight: 700;
+  width: 28rem;
+}
+
+.card img{
+  width: 8rem;
+}
+
+/* Contact Section */
+#contact {
+  height: 75vh;
+  padding: 7rem 4rem; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#contact-inputs {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+}
+
+#contact h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--color-accent);
+}
+
+.input-wrapper {
+  flex: 1;
+  margin-top: 2.4rem;
+}
+
+.input-wrapper label{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+#contact input {
+  width: 35rem;
+  height: 4.8rem;
+  background-image: url(./assets/person.svg);
+  background-repeat: no-repeat;
+  background-position: left .6rem top 50%;
+  border: .2rem solid var(--color-accent-purple);
+  border-radius: 1.6rem;
+  padding-left: 3.5rem;
+}
+
+#contact input[type="email"] {
+  background-image: url(./assets/email.svg);
+}
+
+#contact input::placeholder {
+  font-weight: 700;
+  color: var(--color-accent-purple);
+}
+
+#contact textarea {
+  width: 35rem;
+  height: 15rem;
+  border: .2rem solid var(--color-accent-purple);
+  border-radius: 1.6rem;
+  padding: .8rem;
+  resize: none;
+  margin-top: 2.4rem;
+}
+
+#contact textarea::placeholder {
+  font-weight: 700;
+  color: var(--color-accent-purple);
+}
+
+#contact button {
+  background: var(--bg-gradient);
+  color: var(--color-white);
+  border: none;
+  border-radius: 1.6rem;
+  width: 15rem;
+  height: 5rem;
+  font-weight: 700;
+  margin-top: 2.4rem;
+}
+
+#contact button:hover {
+  background: var(--bg-gradient-hover);
+}
+
+#contact #stars {
+  display: none;
+}
+
+/* Footer Section */
+footer {
+  background: var(--bg-gradient);
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: var(--color-white);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+@media (min-width: 1080px) {
+  /* Home Section */
+  #main-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    padding: 0 12rem;
+  }
+  
+  #home #astronaut {
+    width: max-content;
+    max-width: 700px;
+  }
+
+  #home #title {
+    display: flex;
+    flex-direction: column;
+    order: -1;
+    flex: 1;
+    height: 100vh;
+    justify-content: end;
+  }
+
+  #title h1 {
+    font-size: 6rem;
+    margin-top: 1.7rem;
+  }
+
+  #title p {
+    font-size: 3.2rem;
+    margin-top: 1.7rem;
+  }
+
+  #home .arrow-nav {
+    margin: 24rem 0 12rem;
+  }
+
+  /* Cards Section */
+  #cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 4rem;
+  }
+
+  #card {
+    margin-bottom: 0;
+    height: 90px;
+  }
+
+  /* Contact Section */
+  #contact {
+    justify-content: start;
+    padding: 7rem 0 0 20rem;
+    height: 94vh;
+  }
+
+  #contact-inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100rem;
+    height: 60vh;
+  }
+
+  #contact input {
+    width: 60rem;
+  }
+
+  #contact textarea {
+    width: 60rem;
+    height: 20rem;
+  }
+}
+
+@media (min-width: 1430px) {
+  #contact #stars {
+    object-fit: cover;
+    margin-left: auto;
+    display: block;
+  }
+}
